@@ -13,7 +13,7 @@ function _themename_sidebar_widgets(){
 };
 
 $footer_layout = '3,3,3,3';
-$columns = explode(',', $footer_layout);
+$columns = explode(',', $footer_layout); //[3,3,3,3]
 $footer_bg = 'dark';
 $widget_theme = '';
 if($footer_bg == 'light'){
@@ -27,7 +27,7 @@ foreach ($columns as $i => $column) {
 		'id' => 'footer-sidebar-' . ($i + 1),
 		'name' => sprintf(esc_html__('Footer Widgets Column %s', '_themename'), $i + 1),
 		'description' => esc_html__('Footer widgets', '_themename'),
-		'before_widget' => '<section id="%1$s" class="c-footer-widget ' . $widget_theme . '%2$s">',
+		'before_widget' => '<section id="%1$s" class="c-footer-widget ' . $widget_theme . ' %2$s">',
 		'after_widget' => '</section>',
 		'before_title' => '<h5>',
 		'after_title' => '</h5>'
